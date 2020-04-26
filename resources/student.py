@@ -19,8 +19,8 @@ class Student(Resource):
     @classmethod
 #    @fresh_jwt_required
     def post(cls, _id: int):
-#        if StudentModel.find_by_id(_id):
-#            return {"message": "Student already exists."}, 400
+        if StudentModel.find_by_id(_id):
+            return {"message": "Student already exists."}, 400
 
         student_json = request.get_json()
 #        student_json["id"] = _id
