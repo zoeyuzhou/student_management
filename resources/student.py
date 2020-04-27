@@ -1,7 +1,8 @@
 from flask_restful import Resource
 from flask import request
 from flask_jwt_extended import jwt_required, fresh_jwt_required
-from models.student import StudentModel, StudentSchema
+from models.student import StudentModel
+from schemas.student import StudentSchema
 
 
 student_schema = StudentSchema()

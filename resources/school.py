@@ -1,5 +1,6 @@
 from flask_restful import Resource
-from models.school import SchoolModel, SchoolSchema
+from models.school import SchoolModel
+from schemas.school import SchoolSchema
 
 school_schema = SchoolSchema()
 school_schema_list = SchoolSchema(many=True)

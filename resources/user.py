@@ -8,7 +8,8 @@ from flask_jwt_extended import (
     jwt_required,
     get_raw_jwt
 )
-from models.user import UserModel, UserSchema
+from models.user import UserModel
+from schemas.user import UserSchema
 from blacklist import BLACKLIST
 
 user_schema = UserSchema()

@@ -1,6 +1,6 @@
 from db import db
 from typing import List
-from ma import ma
+
 
 
 class StudentModel(db.Model):
@@ -11,7 +11,7 @@ class StudentModel(db.Model):
     given_name = db.Column(db.String(80), nullable=False)
 
     school_id = db.Column(db.Integer, db.ForeignKey("schools.id"), nullable=False)
-    school = db.relationship("SchoolModel")
+#    school = db.relationship("SchoolModel")
 
     @classmethod
     def find_all(cls) -> List["StudentModel"]:
@@ -29,10 +29,3 @@ class StudentModel(db.Model):
         db.session.delete(self)
         db.session.commit()
 
-
-class StudentSchema(ma.ModelSchema):
-    class Meta:
-        model = StudentModel
-        dump_only = ("id",)
-        load_only = ("school",)
-        include_fk = True
