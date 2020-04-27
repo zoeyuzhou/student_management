@@ -1,6 +1,6 @@
 # Student Management API -- Prototype
 ## Overview
-This repository is to implement a RESTful API of a simple student system prototyping web services.
+This repository is to implement RESTful APIs for a simple student system prototyping web services.
 CRUD interfaces are provided for students and schools. school and students is in one-many relationship. Token-Based 
 Authentication is also provided.
 
