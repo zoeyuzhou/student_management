@@ -1,4 +1,4 @@
-from flask_restful import Resource
+from flask_restx import Resource
 from flask import request
 from flask_jwt_extended import (
     create_access_token,
@@ -13,6 +13,7 @@ from schemas.user import UserSchema
 from blacklist import BLACKLIST
 
 user_schema = UserSchema()
+
 
 class UserRegister(Resource):
     @classmethod

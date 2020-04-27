@@ -11,10 +11,10 @@ class Config:
 
 
     # Database
-    SQLALCHEMY_DATABASE_URI = "sqlite:///data.db"
-#    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://zoe:Passmy1!@127.0.0.1:3306/STUDENT_SYSTEM'
+#    SQLALCHEMY_DATABASE_URI = "sqlite:///data.db"
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://zoe:Passmy1!@127.0.0.1:3306/STUDENT_SYSTEM'
     SQLALCHEMY_USERNAME = 'zoe'
-    SQLALCHEMY_PASSWORD = 'Passmy1!'
+    SQLALCHEMY_PASSWORD = 'Password'
     SQLALCHEMY_DATABASE_NAME = 'STUDENT_SYSTEM'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
