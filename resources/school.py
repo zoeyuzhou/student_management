@@ -4,6 +4,7 @@ from models.school import SchoolModel, SchoolSchema
 school_schema = SchoolSchema()
 school_schema_list = SchoolSchema(many=True)
 
+
 class School(Resource):
     @classmethod
     def get(cls, _id: int):

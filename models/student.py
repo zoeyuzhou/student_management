@@ -33,5 +33,6 @@ class StudentModel(db.Model):
 class StudentSchema(ma.ModelSchema):
     class Meta:
         model = StudentModel
- #       dump_only = ("id",)
-        load_only = ("id",)
+        dump_only = ("id",)
+        load_only = ("school",)
+        include_fk = True

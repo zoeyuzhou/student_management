@@ -1,14 +1,14 @@
 from db import db
 from ma import ma
 from typing import List
-from .student import StudentSchema, StudentModel
+from models.student import StudentSchema
 
 
 class SchoolModel(db.Model):
     __table__ = "schools"
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(160), nullable=False, unique=True)
+    name = db.Column(db.String(100), nullable=False, unique=True)
 
     students = db.relationship("StudentModel", lazy="dynamic")
 
@@ -18,7 +18,7 @@ class SchoolModel(db.Model):
 
     @classmethod
     def find_all(cls) -> List["SchoolModel"]:
-        return cls.query.all();
+        return cls.query.all()
 
     def save_to_db(self) -> None:
         db.session.add(self)
